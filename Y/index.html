@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/portfolio/mon.jpeg" rel="apple-touch-icon">
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/portfolio/mon-pricture.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -27,15 +27,36 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Arsha - v4.10.0
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
+<style>
+* {box-sizing: border-box}
 
+.container1 {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+ /* padding-top: 10px;
+  padding-bottom: 10px;*/
+  color: white;
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+.gwt {width: 60%; background-color: #c9321a;}
+.litelement {width: 60%; background-color: #2ad7fa;}
+.mysql {width: 60%; background-color: #08489c;}
+.java {width: 60%; background-color: #ed0707;}
+
+#cv-container {
+  display: none;
+}
+
+</style>
 <body>
 
   <!-- ======= Header ======= -->
@@ -51,27 +72,8 @@
           <li><a class="nav-link scrollto active" href="#hero">About</a></li>
           <li><a class="nav-link scrollto" href="#clients">My Skills</a></li>
           <li><a class="nav-link scrollto" href="#project">My projects</a></li>
-          <li><a class="nav-link   scrollto" href="#services">Contact</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
-         <!--  <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-          <li><a class="getstarted scrollto" href="#about">Resume</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link getstarted scrollto" href="assets/cv/MonMonAung-NSE.pdf" onclick="initializePdfviewer (arguments)">Resume</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -86,15 +88,19 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Software Developer</h1>
-          <h2>My name is Mon Mon Aung. I have been working as a software developer for about 4 years. I am a responsible person to solve  errors and bugs during software installation and in real time.
-          I am happy working independently or in a close team environment and apply a positive attitude to every task that I undertake.</h2>
+          <h2>My name is Mon Mon Aung. I am a software developer with about 5 years of hands-on experience, including 3
+            years specializing in Golang for backend systems. I have strong analytical and
+            problem-solving skills. I also enjoy staying updated with new technologies to
+            improve system performance and user experiences. I have a proven record of
+            delivering high-quality solutions and am eager to contribute to innovative
+            projects in a dynamic and collaborative environment.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">My Resume</a>
+            <a class="btn-get-started scrollto" href="assets/cv/MonMonAung-NSE.pdf" onclick="initializePdfviewer (arguments)">My Resume</a>
             <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/portfolio/mon.jpeg" class="img-fluid animated" alt="" style="max-width: 50% !important;">
+        <div class="col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/portfolio/mon-pricture.jpg" class="img-fluid " alt="" style="max-width: 35% !important;">
         </div>
       </div>
     </div>
@@ -102,37 +108,80 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
+<div id="cv-container"></div>
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-bg">
       <div class="container">
 
         <div class="row" data-aos="zoom-in">
+            <h1>My Skills</h1>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <!-- <h2><i class="bx bx-chevron-right"></i>PHP</h2> -->
+              <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">Golang</p>
+              <div class="container1">
+                <div class="skills litelement">70%</div>
+              </div>
+              <!-- <img src="assets/img/lang-logo/PHP-logo.svg.png" class="img-fluid" alt=""> -->
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">Java</p>
+              <div class="container1">
+                <div class="skills java">60%</div>
+              </div>
+            </div>
+          
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/lang-logo/PHP-logo.svg.png" class="img-fluid" alt="">
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">PHP</p>
+            <div class="container1">
+              <div class="skills php">70%</div>
+            </div> 
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">JavaScript</p>
+            <div class="container1">
+              <div class="skills js">65%</div>
+            </div>
+          </div>
+          <!-- <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">LitElement</p>
+            <div class="container1">
+              <div class="skills litelement">70%</div>
+            </div>
+          </div> -->
+        </div>
+        <div class="row" data-aos="zoom-in" style="margin-top: 30px;">
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <!-- <h2><i class="bx bx-chevron-right"></i>PHP</h2> -->
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">GWT</p>
+            <div class="container1">
+              <div class="skills gwt">70%</div>
+            </div>
+            <!-- <img src="assets/img/lang-logo/PHP-logo.svg.png" class="img-fluid" alt=""> -->
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <!-- <h2><i class="bx bx-chevron-right"></i>PHP</h2> -->
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">HTML</p>
+            <div class="container1">
+              <div class="skills html">90%</div>
+            </div>
+            <!-- <img src="assets/img/lang-logo/PHP-logo.svg.png" class="img-fluid" alt=""> -->
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/lang-logo/gwt.png" class="img-fluid" alt="">
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">CSS</p>
+            <div class="container1">
+              <div class="skills css">80%</div>
+            </div> 
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/lang-logo/css.jpeg" class="img-fluid" alt="">
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <p style="margin-top:14px;font-weight: bold;padding-right: 5px;">MYSQL</p>
+            <div class="container1">
+              <div class="skills mysql">80%</div>
+            </div>
           </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/lang-logo/mysql.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/lang-logo/css.jpeg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/lang-logo/html.jpg" class="img-fluid" alt="">
-          </div>
-
+          
         </div>
 
       </div>
@@ -140,25 +189,172 @@
 
     <!-- ======= About Us Section ======= -->
    <section id="project" class="project">
-    <section >
+    <!-- <section > -->
       <div class="container" data-aos="fade-up">
 
         <div class="project-title">
-          <h3>1. Forward project</h3>
+          <h3>1. Restaurant Management System</h3>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
-              <img src="assets/img/websites/forwardSale.png" class="img-fluid" alt="">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/RMS1.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/RMS2.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/RMS3.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Forward software for oil stations
+              Restaurant Management System
+            </p>
+                A full-stack web application for managing restaurant operations, from order processing to reporting, built with real-time features and secure access control.
+               <ul style="list-style-type: none;">
+              <li>
+                <!-- <i class="ri-check-double-line"></i> -->
+                <button class="btn btn-primary mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#project1Details" aria-expanded="false" aria-controls="project1Details">
+                  See Key Features >></button>
+                <div class="collapse" id="project1Details">
+                    <ul>
+                      <li>Real-time Order Handling: WebSocket-based communication for instant kitchen notifications.</li>
+                      <li>Role-Based Access: Dashboards tailored to Admin, Waiter, and Kitchen staff.</li>
+                      <li>Advanced Sales Reporting: MongoDB aggregation for detailed sales analysis and reporting.</li>
+                      <li>Secure Authentication: JWT for user authentication and session management.</li>
+                      <li>Optimized Deployment: Docker for containerized deployment and easy scaling.</li>
+                    </ul>
+                </div> 
+               </li>
+              <li><i class="ri-check-double-line"></i>
+              <b>Technologies Used:</b>
+                <ul>
+                  <li><b>Backend:</b> Golang (Gin), <b>Frontend:</b> Vue.js, <b>Database:</b> MongoDB</li>
+                </ul>
+               </li>
+               <li><i class="ri-check-double-line"></i>
+               <b>Demo Access:</b>
+                <li>
+                <ul>
+                  <a href="http://13.51.198.170:9000/frontend/">Live Demo</a> | <a href="https://github.com/mamonthee/go-restaurant-managament">Github Backend</a> | <a href="https://github.com/mamonthee/restaurant-management-frontend">Github Frontend</a></li>
+                  <li><b>Admin:</b> admin@gmail.com / admin123 </li>
+                  <li><b>Waiter:</b> waiter@gmail.com / waiter123</li>
+                   <li><b>Kitchen:</b> kitchen@gmail.com / kitchen123</li>
+                </ul>
+               </li>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+    <section >
+      <div class="container" data-aos="fade-up">
+
+        <div class="project-title">
+          <h3>2. Forward Web Application for oil stations</h3>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/forwardSale.png" class="card-img-top" alt="...">
+                      <!-- <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">This is a description of card 1.</p>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/forwardSale.png" class="card-img-top" alt="...">
+                      <!-- <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">This is a description of card 2.</p>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/forwardSale.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Forward Web Application for oil stations
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i>  This is a client-end system. Station manager can manage shift, price of products, delivery, B2b price, role of customers, many kind of reports .
-               Created the reports of POS sale such as shift sale report, daily sale report, monthly sale report, MOP report,cashier attendance report , etc. And then added the configuration of POS system, user management. This project is created using JAVA.</li>
-
+              <li><i class="ri-check-double-line"></i>  
+                The Forward Web Application is a client-side system designed for oil station management, allowing station managers to efficiently manage various aspects of station operations and customer interactions. This system helps optimize business processes and improve operational efficiency.
+               </li>
+              <li>
+                <button class="btn btn-primary mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#project1Details" aria-expanded="false" aria-controls="project1Details">
+                  See Key Features >></button>
+                <div class="collapse" id="project1Details">
+                  <ul>
+                    <li><b>Product and Price Management:</b> Station managers can dynamically adjust the prices of products, including B2B pricing for wholesale transactions.</li>
+                    <li><b>Shift Management:</b> Enables managers to schedule employee shifts, ensuring smooth operational workflows.</li>
+                    <li><b>Delivery Management:</b> Tracks and manages the physical transfer of crude oil and refined petroleum products from the seller to the buyer.</li>
+                    <li><b>Customer Role Management:</b> Customizes user roles, permissions, and access levels for different types of customers.</li>
+                    <li><b>Customer Management:</b> Credit/Debit Management: Customers can have credit or debit accounts with a specified credit limit or debit top-up, allowing flexible payment options.</li>
+                    <li><b>Promotions:</b> Supports promotional offers, discounts, and loyalty programs to boost customer engagement and retention.</li>
+                    <li><b>POS Configuration:</b> Allows configuration of the POS system according to business requirements.</li>
+                    <li><b>User Management:</b> Manages user authentication and roles for secure access to the system.</li>
+                  </ul>
+                </div> 
+               </li>
+               <li><i class="ri-check-double-line"></i>  <b>Technologies Used:</b>
+                <ul>
+                  <li><b>Backend:</b> Built with <b>Golang</b>, providing high performance and scalability for efficient system operation.</li>
+                  <li> <b>Frontend:</b> Developed using <b>GWT (Java)</b> for creating a responsive and intuitive user interface. </li>
+                  <li><b>Database:</b> SQLite3</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -170,43 +366,74 @@
       <div class="container" data-aos="fade-up">
 
         <div class="project-title">
-          <h3>2. Point Of Sale(POS) project</h3>
+          <h3>3. Point Of Sale(POS) project for oil stations</h3>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
-              <img src="assets/img/websites/app1.jpg" class="img-fluid" alt="">
+              <!-- <img src="assets/img/websites/app1.jpg" class="img-fluid" alt=""> -->
+              <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/tablet-pos1.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/tablet-pos2.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/tablet-pos3.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/tablet-pos4.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p> Point Of Sale(POS) software for oil stations  </p>
             <ul>
-              <li><i class="ri-check-double-line"></i>  Created the pos software that included Method of payment(MOP) system, point system, Promotion, pump control, old receipts by using lit-element language.</li>
-              
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section >
-      <div class="container" data-aos="fade-up">
-
-        <div class="project-title">
-          <h3>3. Admin Website of oil stations</h3>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-              <img src="assets/img/websites/admin.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>Admin Website of oil stations </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 
-                This is all user management that are using our system. Also when there has new user, we need to create. We don’t give access permission to create or any other function  except viewing their account to anyone.  This all function is created by myself using the most of PHP,MYSQL,AJAX,JAVASCRIPT.
+              <li><i class="ri-check-double-line"></i>  
+                <!-- Created the POS software that includes Transaction with many MOP (Method Of Payment)(Cash,Credit,Debit,B2B,MPU), Point System, Promotion, Pump control, printing receipts by using lit-element language for frontend and Golang for backend. -->
+                Developed a Point of Sale (POS) system for oil stations with both a tablet-based web application (using LitElement and PWA technologies) and an Android-based mobile app for real-time transaction handling and customer engagement.
+                <button class="btn btn-primary mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#project1Details" aria-expanded="false" aria-controls="project1Details">
+                  See Key Features >></button>
+                <div class="collapse" id="project1Details">
+                  <ul>
+                    <li><b>Multi-Method of Payment (MOP):</b> Supports various payment methods like Cash, Credit, Debit, B2B, and MPU.</li>
+                    <li><b>Point System:</b> Integrated a point-based system for customer loyalty and rewards.</li>
+                    <li><b>Pump Control:</b> Real-time pump control for fuel dispensing directly from the POS system.</li>
+                  </ul>
+                </div> 
               </li>
-        
+              <li><i class="ri-check-double-line"></i>  <b>Technologies Used:</b>
+                <ul>
+                  <li><b>Backend:</b>  Golang</li>
+                  <li> <b>Frontend:</b> Android(Java), Javascript, Webpack, LitElement (JavaScript Library), HTML/CSS</li>
+                  <li><b>Database:</b> SQLite3</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -214,24 +441,71 @@
       </div>
     </section>
 
+
     <section >
       <div class="container" data-aos="fade-up">
 
         <div class="project-title">
-          <h3>4. Pumpstat Project</h3>
+          <h3>4. Pumpstat Website</h3>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
-              <img src="assets/img/websites/pumpstaHome.jpg" class="img-fluid" alt="">
+              <!-- <img src="assets/img/websites/pumpstaHome.jpg" class="img-fluid" alt=""> -->
+               <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <!-- <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/pump1.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/pump2.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/pump3.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                 <!--  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/pump4.png" class="card-img-top" alt="...">
+                    </div>
+                  </div> -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Pumpstat software for oil stations
+              Pumpstat Website for oil stations
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 
-                This project is showing the real time data real-time data that come from oil station’s tank, status of pump, revenues and deliveries. It can also see the summary of  stations's branches. I created the chart and report for sale , delivery, variances for 2 years. It created by using the most of PHP, MYSQL, JAVASCRIPT.
+                This project shows the real-time data from oil station’s tanks, status of pumps and Deliveries(the physical transfer of crude oil or refined petroleum products from the seller to the buyer).
+              </li>
+              <li><i class="ri-check-double-line"></i> 
+                 It can also see Sales, Deliveries, Wetstocks, Pump Sale Report and POS Sale Report of  stations's branches.
+              </li>
+                  <!-- I created the chart and report for sale , delivery, variances for 2 years.  -->
+              <li><i class="ri-check-double-line"></i> 
+                  It's created by using the most of PHP, MYSQL, JAVASCRIPT. 
               </li>
             </ul>
            
@@ -245,22 +519,69 @@
       <div class="container" data-aos="fade-up">
 
         <div class="project-title">
-          <h3>5. Tankstat software for oil stations</h3>
+          <h3>5. Tankstat Website for oil stations</h3>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
-              <img src="assets/img/websites/thruputChart.png" class="img-fluid" alt="">
+              <!-- <img src="assets/img/websites/thruputChart.png" class="img-fluid" alt=""> -->
+               <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/tank1.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/tank2.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/tank3.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/tank4.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Tankstat software for oil stations
+              Tankstat Website for oil stations
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i>
-                This project is showing the real-time data,status that come from oil station’s tank. 
-                Created the chart and report of thruput of station's branches. Showing current oil amount in tank and how many day we can sell in this month by depending on how much oil sold in last month. It can also display the current sale from pos software.
-                It created by using the most of PHP, MYSQL, JAVASCRIPT.
+              <li>
+                <i class="ri-check-double-line"></i>
+                  This project shows the real-time data,status, runout (current oil amount in tank and how many day we can sell in this month by depending on how much oil sold in last month) that come from oil station’s tank. 
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i>
+                  It can also see MapView, Status, Alarms, Inventory, Thruput, Thruput Chart and Delivery. 
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i>
+                  It display the current sales from POS software.
+                  It's created by using the most of PHP, MYSQL, JAVASCRIPT.
               </li>             
             </ul>
           </div>
@@ -273,12 +594,124 @@
       <div class="container" data-aos="fade-up">
 
         <div class="project-title">
-          <h3>6. FAFNIR software for oil stations</h3>
+          <h3>6. Admin Website for oil stations</h3>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
-              <img src="assets/img/websites/login.jpg" class="img-fluid" alt="">
+              <!-- <img src="assets/img/websites/admin.jpg" class="img-fluid" alt=""> -->
+               <div id="carouselExampleIndicators5" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/admin1.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/admin2.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/admin3.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/admin4.png" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>Admin Website for oil stations </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> 
+                This is database management system UI for previous tankstat and pumpstat projects.
+              </li>
+              <li><i class="ri-check-double-line"></i> 
+                 This can only be used by software support who is authorized. This system includes CRUD operations for both databases and tables. 
+              </li>
+              <li><i class="ri-check-double-line"></i> 
+                 Also when there has new user, we need to create. We don’t give access permission to create or any other function  except viewing their account to anyone.
+              </li>
+              <li><i class="ri-check-double-line"></i> 
+                   It is created by using the most of PHP,MYSQL,AJAX,JAVASCRIPT.
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section >
+      <div class="container" data-aos="fade-up">
+
+        <div class="project-title">
+          <h3>7. FAFNIR software for oil stations</h3>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+              <!-- <img src="assets/img/websites/login.jpg" class="img-fluid" alt=""> -->
+              <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <img src="assets/img/websites/login.jpg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/login.jpg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/login.jpg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <img src="assets/img/websites/login.jpg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
@@ -286,7 +719,13 @@
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 
-                This wesite can manage and show look like all functions of FAFNIR. It contained showing the data, managing the product, showing the report of delivery. It can also manage the settings of fafnir.  This all function is created by myself using the most of PHP,MYSQL,AJAX,JAVASCRIPT.
+                  This website has  functions that look like all functions of FAFNIR.
+              </li>
+              <li><i class="ri-check-double-line"></i> 
+                  It shows the data of oil tanks, managing the products,printing receipts and showing the report of delivery. 
+              </li>
+              <li><i class="ri-check-double-line"></i> 
+                  It can also manage the settings of FAFNIR. It's created by using the most of PHP, MYSQL, AJAX, JAVASCRIPT.
               </li>
     
             </ul>
@@ -297,339 +736,46 @@
     </section>
 </section>
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <!-- <img src="assets/img/websites/app1.jpg" class="img-fluid" alt=""> -->
-                        <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/websites/app1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/websites/app1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/websites/app1.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>Point Of Sale(POS) software for oil stations</h3>
-            <p class="fst-italic">
-               Created the pos software that included Method of payment(MOP) system, point system, Promotion, pump control, old receipts by using lit-element language.
-            </p>
-
-<!--             <div class="skills-content">
-
-              <div class="progress">
-                <span class="skill">HTML <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">CSS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">JavaScript <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Photoshop <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-            </div> -->
-
-          </div>
-        </div>
-
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="d-flex align-items-center contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Contact</h2>
       </div>
-    </section><!-- End Skills Section -->
-     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <!-- <img src="assets/img/websites/forwardSale.png" class="img-fluid" alt=""> -->
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/websites/forwardSale.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/websites/forwardSale.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/websites/forwardSale.png" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+      <div class="row">
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>No-259,Sanpya 3 Street, Thingangyun Township,Yangon ,Myanmar NY 535022</p>
             </div>
-            
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>Forward software for oil stations</h3>
-            <p class="fst-italic">
-                 This is a client-end system. Station manager can manage shift, price of products, delivery, B2b price, role of customers, many kind of reports .
-               Created the reports of POS sale such as shift sale report, daily sale report, monthly sale report, MOP report,cashier attendance report , etc. And then added the configuration of POS system, user management. This project is created using JAVA.
-            </p>
-
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>monmona423@gmail.com</p>
+            </div>
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+959776839247</p>
+            </div>
           </div>
         </div>
-
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.32917458581875!2d96.2054363938587!3d16.844533482276354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c192e7dc8fb9e9%3A0x4100b76f78c7450b!2sSanpya%20St%203%2C%20Yangon!5e0!3m2!1sen!2smm!4v1672932141506!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
-    </section><!-- End Skills Section2 -->
-
-    <!-- ======= Portfolio Section2 ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <!-- <li data-filter=".filter-card">Card</li> -->
-          <li data-filter=".filter-web">Web</li>
-        </ul>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/websites/app1.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/websites/app1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="pos-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/websites/login.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>FAFNIR</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/login.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="fafnir-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/websites/pumpstaHome.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Pumpstat</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="pumpstat-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/websites/forwardSale.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Forward</h4>
-              <p>Web</p>
-              <a href="assets/img/websites/forwardSale.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="forward-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/websites/admin.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Admin Website for our support</h4>
-              <p>Web</p>
-              <a href="assets/img/websites/admin.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="admin-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/websites/thruputChart.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Tankstat for oil station</h4>
-              <p>Web</p>
-              <a href="assets/img/websites/thruputChart.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="tankstat-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>No-259,Sanpya 3 Street, Thingangyun Township,Yangon ,Myanmar NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>monmona423@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+959776839247</p>
-              </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.32917458581875!2d96.2054363938587!3d16.844533482276354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c192e7dc8fb9e9%3A0x4100b76f78c7450b!2sSanpya%20St%203%2C%20Yangon!5e0!3m2!1sen!2smm!4v1672932141506!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- 
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
+    </div>
+  </section><!-- End Contact Section -->
+   <!-- ======= Contact Section ======= -->
+  <section id="contact" class="d-flex align-items-center ">
+    
+  </section><!-- End Contact Section -->
+</main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mon Mon Aung</h3>
-            <p>
-              No-259,Sanpya 3 street <br>
-              Yangon Township<br>
-              Myanmar <br><br>
-              <strong>Phone:</strong> +959776839247<br>
-              <strong>Email:</strong> monmona423@gmail.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
+  
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -646,5 +792,33 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+<script type="text/javascript">
+  function displayCV() {
+    console.log("displayCV");
+  const cvContainer = document.getElementById("cv-container");
 
+  // Create a new element to hold the CV document
+  // const cv = document.createElement("iframe");
+  // cv.src = "assets/cv/My Resume.pdf";
+
+  // // Add the CV element to the container
+  // cvContainer.appendChild(cv);
+   var ws = window.open("", '_blank', "width=1000,height=600,location=no,menubar=no,status=no,titilebar=no,resizable=no")
+            ws.document.write('<!DOCTYPE html><html><head><title>PdfViewer</title><link rel="stylesheet" type="text/css" href="../themes/default-theme/ej.web.all.min.css"><script src="../scripts/jquery-2.1.4.min.js"><\/script><script src="../scripts/ej.web.all.min.js"><\/script><\/head><body>');
+            ws.document.write('<div style="width:100%;min-height:570px" id="container"><\/div>')
+            ws.document.write("<script>$(function(){ $('#container').ejPdfViewer({ serviceUrl: '../api/PdfViewer'})})<\/script>");
+            ws.document.write('<\/body><\/html>');
+            ws.document.close();
+}
+function initalizePdfviewer(arguments) {
+  //Initializes the PDF Viewer control in new window
+    var ws = window.open("", '_blank', "width=1000,height=600,location=no,menubar=no,status=no,titilebar=no,resizable=no")
+            ws.document.write('<!DOCTYPE html><html><head><title>PdfViewer</title><link rel="stylesheet" type="text/css" href="../themes/default-theme/ej.web.all.min.css"><script src="../scripts/jquery-2.1.4.min.js"><\/script><script src="../scripts/ej.web.all.min.js"><\/script><\/head><body>');
+            ws.document.write('<div style="width:100%;min-height:570px" id="container"><\/div>')
+            ws.document.write("<script>$(function(){ $('#container').ejPdfViewer({ serviceUrl: '../api/PdfViewer'})})<\/script>");
+            ws.document.write('<\/body><\/html>');
+            ws.document.close();
+        }   
+
+</script>
 </html>
